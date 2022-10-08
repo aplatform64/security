@@ -5,6 +5,7 @@ sec_firewall_os_platforms:
   - "AlmaLinux8"
   - "Rocky8"
   - "OracleLinux8"
+  - "OracleLinux9"
   - "Ubuntu20"
   - "Ubuntu21"
   - "Ubuntu22"
@@ -14,7 +15,7 @@ sec_firewall_os_platforms:
   - "Debian10"
   - "Debian11"
 
-sec_firewall_os_family: "
+sec_firewall_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -32,5 +33,4 @@ sec_firewall_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 ...
