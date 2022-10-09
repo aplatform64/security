@@ -15,7 +15,7 @@ sec_openssh_server_platforms:
   - "Debian10"
   - "Debian11"
 
-sec_openssh_server_os_family: |
+sec_openssh_server_os_family: >-
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
